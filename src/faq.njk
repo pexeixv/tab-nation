@@ -1,0 +1,32 @@
+---
+title: FAQs
+layout: base.njk
+
+---
+
+
+<section class="bg-black text-white">
+    <div class="container flex flex-col items-center mx-auto py-28 px-5">
+        {% set props = { text: 'FAQs'} %}
+        {% include 'h2.njk' %}
+        
+        {% set props = { text: 'These are the most common ask AHK questions.'} %}
+        {% include 'h3.njk' %}
+
+        <div class="w-full max-w-4xl mx-auto mt-16">
+            {% for faq in collections.faqs %}
+                {% set props = { index: faq.data.index, question: faq.data.question, answer: faq.content} %}
+                {% include 'accordion.njk' %}
+            {% endfor %}
+        </div>
+
+
+
+
+    </div>
+</section>
+
+
+
+
+

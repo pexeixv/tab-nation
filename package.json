@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "tw": "npx tailwindcss -i src/styles/input.css -o src/styles/output.css -w",
+    "del": "powershell rm ./dist"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.5",
+    "tailwindcss": "^3.0.15"
+  }
+}

@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.bebas{
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+
+.dark-grey{
+    background: #222;
+}
+
+@media screen and (min-width: 768px){
+    .home-grid-div:nth-child(odd){
+        justify-self: end;
+    }
+    
+}
+
+@media screen and (max-width: 768px){
+    .h1_break{
+        display: none;
+    }
+    
+}
+
+@media screen and (max-width: 1024px){
+.nav-hidden{
+    height: 0;
+    overflow: hidden;
+    padding: 0;
+    margin-top: 0;
+}
+}

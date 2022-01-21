@@ -1,0 +1,36 @@
+---
+title: For Hire
+layout: base.njk
+
+---
+
+<section class="bg-black text-white">
+    <div class="container flex flex-col items-center mx-auto py-28 px-5">
+        
+            {% set props = { text: 'FOR HIRE'} %}
+            {% include 'h3.njk' %}
+        
+            {% set props = { text: 'Get A Quote'} %}
+            {% include 'h2.njk' %}
+            
+            <div class="lg:w-3/5 mx-auto mt-10 mb-16">
+    
+    
+                <p class="mb-5">Need someone to help you create a program to automate something? Shot me an email and I will get back to you so we can start to create a custom program to meet your needs!</p>
+                <p class="mb-5">I have been working with AutoHotkeys for 5+ years now both in my personal life and while working for a large company with over 100 employes using my automated programs thus saving 1000s of hours a year.</p>
+                <p class="mb-2 font-bold text-lg">Things to try to include in your email. </p>
+                <ul class="list-disc">
+                    <li class="ml-5">What program do you need to automate?</li>
+                    <li class="ml-5">When you preform this task manually what are the steps you take?</li>
+                    <li class="ml-5">What is the goal of the program</li>
+                    <li class="ml-5">any screen shots I should see?</li>
+                    <li class="ml-5">website addresses</li>
+                </ul>
+
+    
+            </div>
+            {% set props = { link: "mailto:tadamm88@gmail.com?subject=Get%20A%20Quote", text: "Mail Me"} %}
+            {% include 'button.njk' %}
+    </div>
+
+</section>

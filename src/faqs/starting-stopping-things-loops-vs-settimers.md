@@ -12,27 +12,17 @@ F1 starts it. F2 stops it.
 
 ```
 ; Start timer. It'll run the helloPopUp label every 20 seconds.
-
 F1::
-
     SetTimer, helloPopUp, 20000
-
 return
-
 
 ; Stop the popup timer.
-
 F2::
-
     SetTimer, helloPopUp, Off
-
 return
 
-
 helloPopUp:
-
     MsgBox Hello!
-
 return
 ```
 
@@ -43,32 +33,19 @@ Here's an example of the same script using a loop with an if-break statement. It
 
 ```
 F1::
-
     breaker := false
-
     Loop
-
     {
-
         if (breaker = true){
-
             break
-
         }
-
         Sleep, 20000
-
         MsgBox Hello!
-
     }
-
 return
 
-
 F2::
-
     breaker    := true
-
 return
 ```
 

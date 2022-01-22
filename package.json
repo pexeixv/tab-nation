@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "tw": "npx tailwindcss -i src/styles/input.css -o src/styles/output.css -w",
+    "tw": "tailwindcss -i src/styles/input.css -o src/styles/output.css -w",
     "del": "powershell rm ./dist"
   },
   "devDependencies": {

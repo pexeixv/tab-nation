@@ -11,43 +11,26 @@ Here's my own personal script I use to control WinAmp (a music player) regardles
 ```
 ;============================== Winamp ==============================
 
-
 #IfWinExist, ahk_exe winamp.exe
-
-
 ; Previous Song
 
 #z::
-
     ControlSend, ahk_parent, z, ahk_class Winamp v1.x
-
 return
-
 
 ; Play
-
 #x::
-
     ControlSend, ahk_parent, x, ahk_class Winamp v1.x
-
 return
-
 
 ; Pause
-
 #v::
-
     ControlSend, ahk_parent, c, ahk_class Winamp v1.x
-
 return
 
-
 ; Next Song
-
 #b::
-
     ControlSend, ahk_parent, b, ahk_class Winamp v1.x
-
 return
 ```
 

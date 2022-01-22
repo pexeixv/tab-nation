@@ -9,20 +9,13 @@ To make a hotkey that only works in Chrome, we can use the following:
 
 ```
 ; Everything following #IfWinActive will only work for the program specified.
-
 #IfWinActive, ahk_exe chrome.exe
 
-
 ; Opens a new tab and searches for "autohotkey tutorial"
-
 F1::
-
     Send, ^t
-
     Sleep, 100
-
     Send, autohotkey tutorial{enter}
-
 return
 ```
 

@@ -17,12 +17,12 @@ Easy Steps:
 
 First basic steps to get AHK working with the average game.
 
-1) Make sure the script is running with Admin privilege(Right-Click on script, Run As Administrator)
+### 1. Make sure the script is running with Admin privilege(Right-Click on script, Run As Administrator)
 
 -Explanation: Some games run at admin level and AHK does not typically run with this privilege set.
 
 
-2) Switch the game settings from 'Full Screen' mode to 'Windowed' or (I prefer) 'Borderless Windowed' mode.
+### 2. Switch the game settings from 'Full Screen' mode to 'Windowed' or (I prefer) 'Borderless Windowed' mode.
 
 -Explanation: DirectX draws the screen in a manner different from Windows, this can cause things like colors
 
@@ -31,7 +31,7 @@ being reported wrong, mouse jumping to the 'wrong' coords, and it can just plain
 registering the input at all.
 
 
-3) A lot of times Keypresses need to be held down longer than normal for the game to fully register it.
+### 3. A lot of times Keypresses need to be held down longer than normal for the game to fully register it.
 
 -Explanation: Usually caused by DirectX(DirectInput). It 'polls' the keyboard every 15ms(varies slightly) and
 
@@ -48,7 +48,6 @@ or more in some select cases.
 
 -Example: (Holds key down for 20ms)
 
-
 Code: Select all - Toggle Line numbers
 
 Send, {a down}
@@ -56,7 +55,7 @@ Sleep 20
 Send, {a up}
 
 
-4) Some games do not allow their keybinds to be 'hijacked'.
+### 4. Some games do not allow their keybinds to be 'hijacked'.
 
 -Explanation: Many games, especially DirectX driven, use driver level keyboard interaction and cannot be
 

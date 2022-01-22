@@ -14,38 +14,22 @@ This example shows how to make the 'a' key fire the 'b' key repeatedly.
 
 ```
 ; The hook $ hotkey modifier prevents a hotkey from firing itself.
-
 ; If 'a' is the hotkey, and it sends 'a', it would keep looping
-
 $a::
-
     ; Run the label AutoFireA
-
     GoSub, AutoFireA
-
 return
-
 
 ; Label auto firing
-
 AutoFireA:
-
     ; Send a key. We're using 'b'
-
     Send, b
-
     ; Check to see if 'a' is still being held down
-
     if GetKeyState("a", "P")
-
         ; If yes, set a timer to run this label again. Time is in ms
-
         ; Using a negative number fires the timer once instead of repeatedly.
-
         SetTimer, AutoFireA, -100
-
 return
-
 ```
 
 

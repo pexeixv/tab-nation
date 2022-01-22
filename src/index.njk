@@ -52,7 +52,7 @@ layout: base.njk
 
                 <div class="flex flex-wrap gap-3 mt-2">
 
-                    {% for title in upcoming %}
+                    {% for title in upcomingVideos | reverse %}
                         {% set props = { text: title} %}
                         {% include 'upcoming.njk' %}
                     {% endfor %}

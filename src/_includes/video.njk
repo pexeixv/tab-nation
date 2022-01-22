@@ -1,0 +1,25 @@
+<div class="dark-grey w-full max-w-sm rounded-lg p-5 flex flex-col video-card" data-category="{{props.category}}">
+    <span class="text-xs uppercase">{{props.category}}</span>
+    <h3 class="font-bold text-xl mt-2">
+        {{props.title}}
+    </h3>
+    <p class="mt-3">
+        {{props.desc}}
+    </p>
+    <div class="flex w-full justify-between mt-5 flex-1 items-end">
+        <a href="{{props.videoLink}}"
+            class="bg-orange-500 py-1 px-3 font-bold text-xl uppercase rounded hover:top-1 relative transition-all top-0 hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-100/20"
+            target="_blank">
+            Video
+        </a>
+
+        {% if props.pastebinLink %}
+            <a href="{{props.pastebinLink}}"
+                class="bg-orange-500 py-1 px-3 font-bold text-xl uppercase rounded hover:top-1 relative transition-all top-0 hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-100/20"
+                target="_blank">
+                Code
+            </a>
+        {% endif %}
+        
+    </div>
+</div>

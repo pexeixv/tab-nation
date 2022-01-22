@@ -2,3 +2,4 @@ node_modules
 documentation
 resources
 dist
+.env

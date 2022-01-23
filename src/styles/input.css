@@ -28,6 +28,25 @@
     margin-bottom: 5px;
 }
 
+
+.accordion-visible .max-h-0{
+    max-height: fit-content;
+    margin-bottom: 16px;
+}
+
+.accordion-visible .fa-chevron-down{
+    transform: rotate(180deg);
+}
+
+.accordion-visible > div {
+    color: white;
+}
+
+.accordion-section ul{
+    list-style: disc;
+    margin-left: 20px;
+}
+
 @media screen and (min-width: 768px){
     .home-grid-div:nth-child(odd){
         justify-self: end;

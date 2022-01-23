@@ -1,15 +1,15 @@
-<div class="group outline-none accordion-section" tabindex="{{props.index}}">
+<div class="outline-none accordion-section" tabindex="{{props.index}}" onclick="this.classList.toggle('accordion-visible')">
     <div class="group dark-grey flex justify-between px-4 py-3 items-center text-gray-500 transition ease duration-500
             cursor-pointer pr-10 relative">
-        <div class="group-focus:text-white transition ease duration-500">
+        <div class="group-focus:text-white transition ease font-bold">
             {{props.question}}
         </div>
         <div class="h-8 w-8 border border-gray-700 rounded-full items-center inline-flex justify-center transform transition ease
-                duration-500 group-focus:text-white group-focus:-rotate-180 absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2">
-            <i class="fas fa-chevron-down"></i>
+                duration-500 group-focus:text-white absolute top-0 right-0 mb-auto ml-auto mt-2 mr-2">
+            <i class="fas fa-chevron-down transition"></i>
         </div>
     </div>
-    <div class="group-focus:max-h-fit max-h-0 bg-grey px-4 overflow-hidden ease duration-500 group-focus:py-5 group-focus:pt-1">
+    <div class="max-h-0 bg-grey px-4 overflow-hidden ease duration-500 transition mb-0">
         <p class="p-2 text-gray-400 text-justify">
             {{props.answer}}
         </p>

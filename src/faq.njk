@@ -20,12 +20,28 @@ layout: base.njk
             {% endfor %}
         </div>
 
-
-
     </div>
 </section>
 
 
 
+
+<section class="bg-black text-white">
+    <div class="container flex flex-col items-center mx-auto py-28 px-5 faq">
+        {% set props = { text: 'Game Info List'} %}
+        {% include 'h2.njk' %}
+        
+        {% set props = { text: 'All the facts we know so far for gaming with AHK'} %}
+        {% include 'h3.njk' %}
+
+        <div class="w-full max-w-4xl mx-auto mt-16">
+            {% for faq in collections.gameFaqs | sortByIndex%}
+                {% set props = { index: faq.data.index, question: faq.data.question, answer: faq.templateContent | safe} %}
+                {% include 'accordion.njk' %}
+            {% endfor %}
+        </div>
+
+    </div>
+</section>
 
 

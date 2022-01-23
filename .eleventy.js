@@ -7,6 +7,7 @@ module.exports = eleventyConfig => {
     eleventyConfig.addPassthroughCopy('./src/styles')
     eleventyConfig.addPassthroughCopy('./src/js')
     eleventyConfig.addPassthroughCopy('./src/img')
+    eleventyConfig.addPassthroughCopy('./_redirects')
     return {
         dir: {
             input: "src",

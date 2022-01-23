@@ -6,20 +6,19 @@ layout: base.njk
 
 
 <section class="bg-black text-white">
-    <div class="container mx-auto py-20 flex flex-col items-center gap-5 px-5">
+    <div class="container mx-auto py-20 flex flex-col lg:items-center gap-5 px-5">
         {% set props = { text: 'Videos & Code'} %}
         {% include 'h2.njk' %}
-        <div class="mt-5"></div>
         {% set props = { text: 'Filter by category'} %}
         {% include 'h3.njk' %}
 
-        <div class="mx-auto flex flex-col lg:flex-row justify-center gap-2 lg:gap-0">
-            <div class="flex justify-center">
+        <div class="lg:mx-auto flex flex-col lg:flex-row justify-center gap-2 lg:gap-0">
+            <div class="flex lg:justify-center">
                 <button onclick="filterVideo('Intro',this)" class="video-filter-buttons h-10 px-5 text-indigo-100 transition-colors duration-150 bg-orange-500 rounded-l-lg focus:shadow-outline hover:bg-orange-600">Intro</button>
                 <button onclick="filterVideo('Gaming',this)" class="video-filter-buttons h-10 px-5 text-indigo-100 transition-colors duration-150 bg-orange-500 focus:shadow-outline hover:bg-orange-600">Gaming</button>
                 <button onclick="filterVideo('Browsers',this)" class="video-filter-buttons h-10 px-5 text-indigo-100 transition-colors duration-150 bg-orange-500 rounded-r-lg lg:rounded-none focus:shadow-outline hover:bg-orange-600 ">Browsers</button>
             </div>
-            <div class="flex justify-center">
+            <div class="flex lg:justify-center">
                 <button onclick="filterVideo('GUIs and INI',this)" class="video-filter-buttons h-10 px-5 text-indigo-100 transition-colors duration-150 bg-orange-500 rounded-l-lg lg:rounded-none focus:shadow-outline hover:bg-orange-600">GUIs & INI</button>
                 <button onclick="filterVideo('Other',this)" class="video-filter-buttons h-10 px-5 text-indigo-100 transition-colors duration-150 bg-orange-500 focus:shadow-outline hover:bg-orange-600">Other</button>
                 <button onclick="filterVideo('Other languages',this)" class="video-filter-buttons h-10 px-5 text-indigo-100 transition-colors duration-150 bg-orange-500 rounded-r-lg focus:shadow-outline hover:bg-orange-600">Other languages</button>
@@ -27,7 +26,7 @@ layout: base.njk
         </div>
 
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full gap-8 mt-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full gap-8 mt-20 justify-items-center">
             {% for video in videos | reverse %}
                 {% set props = { title: video.title, desc: video.description, videoLink: video.videoUrl, pastebinLink: video.pastebinUrl, category: video.category} %}
                 {% include 'video.njk' %}

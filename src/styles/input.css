@@ -16,13 +16,23 @@
     background: black url('/img/banner-trans.png') top left no-repeat ;
 }
 
-.faq pre{
+.faq code{
     background: #222;
     padding: 10px 20px;
     margin: 10px 0;
     font-size: 0.7em;
     overflow-x: auto;
 }
+.faq blockquote{
+    background: #222;
+    padding: 10px 20px;
+    margin: 10px 0;
+    font-size: 0.85em;
+    font-family: monospace;
+    overflow-x: auto;
+}
+
+
 
 .faq p{
     margin-bottom: 5px;

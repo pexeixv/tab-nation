@@ -14,10 +14,10 @@ layout: base.njk
         {% include 'h3.njk' %}
 
         <div class="w-full max-w-4xl mx-auto mt-16">
-            {% for faq in collections.faqs | sortByIndex%}
-                {% set props = { index: faq.data.index, question: faq.data.question, answer: faq.templateContent | safe} %}
+            {% for faq in faqs | reverse %}
+                {% set props = { question: faq.question, answer: faq.answer | marked |safe } %}
                 {% include 'accordion.njk' %}
-            {% endfor %}
+            {% endfor %} 
         </div>
 
     </div>
@@ -35,8 +35,8 @@ layout: base.njk
         {% include 'h3.njk' %}
 
         <div class="w-full max-w-4xl mx-auto mt-16">
-            {% for faq in collections.gameFaqs | sortByIndex%}
-                {% set props = { index: faq.data.index, question: faq.data.question, answer: faq.templateContent | safe} %}
+            {% for faq in gameFaqs | gameFaqSort %}
+                {% set props = { question: faq.question, answer: faq.answer | marked |safe } %}
                 {% include 'accordion.njk' %}
             {% endfor %}
         </div>

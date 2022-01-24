@@ -11,7 +11,8 @@ module.exports = () => {
         .getEntries({
             content_type: "faQs",
         })
-        .then(response=>  response.items.map(item =>item.fields) )
+        .then(response=>response.items.sort((a,b)=>new Date(a.sys.createdAt) - new Date(b.sys.createdAt)))
+        // .then(response=>  response.items.map(item =>item.fields) )
         .catch(console.error)
 }
 

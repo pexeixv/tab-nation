@@ -26,11 +26,15 @@ layout: base.njk
         </div>
 
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full gap-8 mt-20 justify-items-center">
+        <div class="colcade-grid flex w-full gap-5 mt-20 justify-center">
             {% for video in videos | reverse %}
                 {% set props = { title: video.title, desc: video.description, videoLink: video.videoUrl, pastebinLink: video.pastebinUrl, category: video.category} %}
                 {% include 'video.njk' %}
             {% endfor %}
+            <div class="colcade-col flex-1 flex-grow-1"></div>
+            <div class="colcade-col flex-1 flex-grow-1 hidden md:block"></div>
+            <div class="colcade-col flex-1 flex-grow-1 hidden lg:block"></div>
+            <div class="colcade-col flex-1 flex-grow-1 hidden xl:block"></div>
         </div>
 
 
@@ -41,9 +45,10 @@ layout: base.njk
 </section>
 
 
-
+<script src="/js/colcade@0.2.0.js"></script>
 
 <script>
+    let mainColcade
     const buttons = document.querySelectorAll('.video-filter-buttons')
     const videos = document.querySelectorAll('.video-card')
     const filterVideo = (category,e) =>{
@@ -53,11 +58,27 @@ layout: base.njk
                 button.classList.add('bg-orange-700')
         })
         videos.forEach(video=>{
-            if(video.dataset.category == category)
+            if(video.dataset.category == category){
                 video.classList.remove('hidden')
-            else video.classList.add('hidden')
+                video.classList.add('colcade-filtered-item')
+            }
+            else {
+                video.classList.add('hidden')
+                video.classList.remove('colcade-filtered-item')
+            }
         })
+        mainColcade.destroy()
+        console.log('destroy')
+        mainColcade = new Colcade( '.colcade-grid', {
+            columns: '.colcade-col',
+            items: '.colcade-filtered-item'
+        })
+        console.log('new')
     }
+    mainColcade = new Colcade( '.colcade-grid', {
+        columns: '.colcade-col',
+        items: '.colcade-item'
+    })
 </script>
 
 

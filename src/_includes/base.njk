@@ -18,16 +18,18 @@
 
 </head>
 
-<body>
+<body class="flex flex-col min-h-screen bg-black">
 
 
 
     {% include 'header.njk' %}
 
 
-
-    {{ content | safe }}
-
+    <div class="flex-1">
+        
+            {{ content | safe }}
+        
+    </div>
 
 
     {% include 'footer.njk' %}

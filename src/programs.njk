@@ -5,40 +5,46 @@ layout: base.njk
 ---
 
 
-<section class="bg-black text-white min-h-screen">
+<section class="bg-black text-white">
     <div class="container mx-auto py-20 flex flex-col lg:items-center gap-5 px-5">
         {% set props = { text: 'AutoHotKey Programs'} %}
         {% include 'h2.njk' %}
 
 
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full gap-8 mt-20 justify-items-center">
+        <div class="colcade-grid flex w-full gap-5 mt-20 justify-center">
             {% for link in programs | reverse %}
-                
-
-            <div class="dark-grey w-full max-w-sm rounded-lg p-5 flex flex-col video-card" data-category="{{link.category}}">
-                <span class="text-xs uppercase">{{link.category}}</span>
-                <h3 class="font-bold text-xl mt-2">
-                    {{link.title}}
-                </h3>
-                <p class="mt-3">
-                    {{link.description}}
-                </p>
-                <div class="flex w-full justify-between mt-5 flex-1 items-end">
-                    <a href="{{link.url}}"
-                        class="bg-orange-500 py-1 px-3 font-bold text-xl uppercase rounded hover:top-1 relative transition-all top-0 hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-100/20"
-                        target="_blank">
-                        Visit
-                    </a>
+                <div class="colcade-item  mb-5 mx-auto dark-grey w-full max-w-sm rounded-lg p-5 flex flex-col video-card" data-category="{{link.category}}">
+                    <span class="text-xs uppercase">{{link.category}}</span>
+                    <h3 class="font-bold text-xl mt-2">
+                        {{link.title}}
+                    </h3>
+                    <p class="mt-3">
+                        {{link.description}}
+                    </p>
+                    <div class="flex w-full justify-between mt-5 flex-1 items-end">
+                        <a href="{{link.url}}"
+                            class="bg-orange-500 py-1 px-3 font-bold text-xl uppercase rounded hover:top-1 relative transition-all top-0 hover:bg-orange-600 hover:shadow-lg hover:shadow-orange-100/20"
+                            target="_blank">
+                            Visit
+                        </a>
+                    </div>
                 </div>
-            </div>
-
-
-
             {% endfor %}
+            <div class="colcade-col flex-1 flex-grow-1"></div>
+            <div class="colcade-col flex-1 flex-grow-1 hidden md:block"></div>
+            <div class="colcade-col flex-1 flex-grow-1 hidden lg:block"></div>
+            <div class="colcade-col flex-1 flex-grow-1 hidden xl:block"></div>
         </div>
-
-        
-
     </div>
 </section>
+
+
+<script src="/js/colcade@0.2.0.js"></script>
+<script>
+    var mainColcade = new Colcade( '.colcade-grid', {
+        columns: '.colcade-col',
+        items: '.colcade-item'
+    })
+    console.log(mainColcade)
+</script>

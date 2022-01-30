@@ -1,14 +1,13 @@
 {
   "scripts": {
     "tw": "tailwindcss -i src/styles/input.css -o src/styles/output.css -w",
-    "del": "powershell rm ./dist"
+    "dev": "eleventy --serve",
+    "build": "eleventy"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.0",
     "@contentful/rich-text-html-renderer": "^15.11.1",
-    "@contentful/rich-text-react-renderer": "^15.11.1",
     "contentful": "^9.1.5",
-    "dotenv": "^14.2.0",
-    "marked": "^4.0.10"
+    "dotenv": "^14.2.0"
   }
 }

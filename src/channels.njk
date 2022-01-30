@@ -5,7 +5,7 @@ layout: base.njk
 ---
 
 
-<section class="bg-black text-white min-h-screen">
+<section class="bg-black text-white">
     <div class="container mx-auto py-20 flex flex-col lg:items-center gap-5 px-5">
         {% set props = { text: 'Youtube Coding Channels'} %}
         {% include 'h2.njk' %}
@@ -14,11 +14,10 @@ layout: base.njk
         
 
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 w-full gap-8 mt-20 justify-items-center">
+        <div class="colcade-grid flex w-full gap-5 mt-20 justify-center">
             {% for link in channels | reverse %}
-                
-
-            <div class="dark-grey w-full max-w-sm rounded-lg p-5 flex flex-col video-card" data-category="{{link.category}}">
+            
+            <div class="colcade-item  mb-5 mx-auto dark-grey w-full max-w-sm rounded-lg p-5 flex flex-col video-card" data-category="{{link.category}}">
 
                 <div class="flex flex-wrap gap-1">
                 {% for language in link.languages %}
@@ -40,13 +39,24 @@ layout: base.njk
                     </a>
                 </div>
             </div>
-
-
-
             {% endfor %}
+            <div class="colcade-col flex-1 flex-grow-1"></div>
+            <div class="colcade-col flex-1 flex-grow-1 hidden xl:block"></div>
+            <div class="colcade-col flex-1 flex-grow-1 hidden lg:block"></div>
+            <div class="colcade-col flex-1 flex-grow-1 hidden md:block"></div>
         </div>
 
         
 
     </div>
 </section>
+
+
+<script src="/js/colcade@0.2.0.js"></script>
+<script>
+    var mainColcade = new Colcade( '.colcade-grid', {
+        columns: '.colcade-col',
+        items: '.colcade-item'
+    })
+    console.log(mainColcade)
+</script>

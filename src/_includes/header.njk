@@ -1,7 +1,7 @@
-    <section class="bg-white">
+    <section class="bg-white transition-all fixed w-full z-20 ">
         <header class="container mx-auto flex lg:items-center flex-col p-5 justify-between relative items-start">
             <div class="flex justify-between lg:justify-center w-full ">
-                <a href="/"><img src="/img/logo.svg" class="h-10 lg:h-20"></a>
+                <a href="/"><img src="/img/logo.svg" class="h-10 lg:h-20 logo transition-all"></a>
                 <ham class="lg:hidden cursor-pointer grid place-items-center" data-visible="false"
                     style="-webkit-tap-highlight-color: rgba(0,0,0,0);">
                     <i class="fas fa-bars text-2xl"></i>
@@ -50,3 +50,29 @@
             </nav>
         </header>
     </section>
+
+    <div class="lg:h-12 hidden"></div>
+    <div class="h-[80px] lg:h-[172px]"></div>
+
+    <script>
+        const ham = document.querySelector('ham')
+        const nav = document.querySelector('nav')
+
+        ham.addEventListener('click', () => {
+            let visible = ham.dataset.visible
+            visible = (visible == 'true') ? true : false
+            nav.classList.toggle('nav-hidden')
+            ham.setAttribute('data-visible', !visible)
+        })
+
+
+        window.addEventListener('scroll',()=>{
+            var top = window.scrollY
+            var logo = document.querySelector('.logo')
+            if(top>30){
+                logo.classList.add('lg:h-12')
+            }else{
+                logo.classList.remove('lg:h-12')
+            }
+        })
+    </script>

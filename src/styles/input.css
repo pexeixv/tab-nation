@@ -3,83 +3,44 @@
 @tailwind utilities;
 
 
-.bebas{
-    font-family: 'Bebas Neue', sans-serif;
+.faq blockquote, .faq code{
+    @apply bg-neutral-900 overflow-x-auto font-mono px-5 py-3 my-5 text-xs;
 }
-
-
-.dark-grey{
-    background: #222;
-}
-
-
-.faq code{
-    background: #222;
-    padding: 10px 20px;
-    margin: 10px 0;
-    font-size: 0.7em;
-    overflow-x: auto;
-}
-.faq blockquote{
-    background: #222;
-    padding: 10px 20px;
-    margin: 10px 0;
-    font-size: 0.85em;
-    font-family: monospace;
-    overflow-x: auto;
-}
-
-
 
 .faq p{
-    margin-bottom: 5px;
+    @apply mb-1;
 }
 
-
 .accordion-visible .max-h-0{
-    max-height: fit-content;
-    margin-bottom: 16px;
+    @apply max-h-fit mb-4;
 }
 
 .accordion-visible .fa-chevron-down{
-    transform: rotate(180deg);
+    @apply rotate-180;
 }
 
 .accordion-visible > div {
-    color: white;
+    @apply text-white
 }
 
 .accordion-section ul{
-    list-style: disc;
-    margin-left: 20px;
+    @apply ml-5 list-disc;
 }
 
 input[type="search"]::-webkit-search-cancel-button {
     -webkit-appearance: none;
     pointer-events: none;
-  }
-
-
+}
 
 @media screen and (min-width: 768px){
     .home-grid-div:nth-child(odd){
-        justify-self: end;
-    }
-    
-}
-
-@media screen and (max-width: 768px){
-    .h1_break{
-        display: none;
+        @apply justify-self-end;
     }
     
 }
 
 @media screen and (max-width: 1024px){
     .nav-hidden{
-        height: 0;
-        overflow: hidden;
-        padding: 0;
-        margin-top: 0;
+        @apply h-0 overflow-hidden p-0 mt-0;
     }
 }

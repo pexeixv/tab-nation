@@ -1,7 +1,11 @@
 module.exports = {
   content: ['./**/*.{html,njk}'],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'bebas': ['Bebas', 'Arial', 'sans-serif']
+      }
+    },
   },
   plugins: [],
 

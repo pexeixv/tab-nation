@@ -3,7 +3,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'bebas': ['Bebas', 'Arial', 'sans-serif']
+        'bebas': ['Bebas Neue', 'Arial', 'sans-serif']
       }
     },
   },

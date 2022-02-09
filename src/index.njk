@@ -4,29 +4,32 @@ layout: base.njk
 
 ---
 
+    <link rel="stylesheet" href="/styles/aos@2.3.1.css">
+
     <section class="bg-black text-white" style="background: black url('/img/banner-trans.png') top left no-repeat;">
         <main
             class="container mx-auto flex flex-col items-start lg:items-center gap-5 px-5 py-28 lg:py-40 lg:text-center">
-            <h1 class="text-4xl md:text-5xl lg:text-7xl font-black tracking-tight drop-shadow">
+            <h1 class="text-4xl md:text-5xl lg:text-7xl font-black tracking-tight drop-shadow" data-aos="fade-up">
                 AHK scripts and
                 <br class="hidden md:block">
                 videos uploaded all the
                 <br class="hidden md:block">
                 time just for you!
             </h1>
-            <p class="text-gray-300 text-lg lg:text-xl w-3/4 lg:w-full">
+            <p class="text-gray-300 text-lg lg:text-xl w-3/4 lg:w-full" data-aos="fade-up" data-aos-delay="400" >
                 Email us your script to showcase on the site or in a video!
             </p>
 
             {% set props = { link: "mailto:Tadamm88@gmail.com?subject=Tab%20Nations%20Code", text: "Mail Us"} %}
+            <div data-aos="fade-up" data-aos-delay="800" >
             {% include 'button.njk' %}
-
+            </div>
 
         </main>
     </section>
 
 
-    <section class="bg-black text-white ">
+    <section class="bg-black text-white" data-aos="fade-up" data-aos-delay="2000">
         <div class="container mx-auto flex flex-col lg:items-center pb-24 lg:pb-40 px-5">
             
             {% set props = { text: 'News'} %}
@@ -96,5 +99,11 @@ layout: base.njk
     </section>
 
 
-
+    <script src="/js/aos@2.3.1.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 500
+        })
+    </script>
 

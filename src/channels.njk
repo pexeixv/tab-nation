@@ -11,6 +11,23 @@ layout: base.njk
         {% include 'h2.njk' %}
         {% set props = { text: 'Only main language of the channel is listed but they may be doing more than that.'} %}
         {% include 'h3.njk' %}
+
+        <div class="flex flex-col lg:flex-row gap-16 w-full">
+            <div class="flex flex-col flex-1 items-start lg:items-center w-fit">
+                <div class="pt-4 relative mx-auto text-white">
+                    <input class=" bg-neutral-900 h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+                    type="search" name="search" placeholder="Search">
+                    <button type="submit" class="absolute right-0 top-0 mt-7 mr-4">
+                        <svg class="text-white h-4 w-4 fill-orange-500" id="Capa_1" x="0px" y="0px"
+                            viewBox="0 0 56.966 56.966" style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve"
+                            width="512px" height="512px">
+                            <path
+                            d="M55.146,51.887L41.588,37.786c3.486-4.144,5.396-9.358,5.396-14.786c0-12.682-10.318-23-23-23s-23,10.318-23,23  s10.318,23,23,23c4.761,0,9.298-1.436,13.177-4.162l13.661,14.208c0.571,0.593,1.339,0.92,2.162,0.92  c0.779,0,1.518-0.297,2.079-0.837C56.255,54.982,56.293,53.08,55.146,51.887z M23.984,6c9.374,0,17,7.626,17,17s-7.626,17-17,17  s-17-7.626-17-17S14.61,6,23.984,6z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
         
 
 
@@ -19,7 +36,7 @@ layout: base.njk
             
             <div class="colcade-item  mb-5 mx-auto bg-neutral-900 w-full max-w-sm rounded-lg p-5 flex flex-col video-card" data-category="{{link.category}}">
 
-                <div class="flex flex-wrap gap-1">
+                <div class="flex flex-wrap gap-1 languages">
                 {% for language in link.languages %}
                     <span class="text-xs py-1 px-2 bg-orange-500 rounded ">{{language}}</span>
 
@@ -54,9 +71,32 @@ layout: base.njk
 
 <script src="/js/colcade@0.2.0.js"></script>
 <script>
-    var mainColcade = new Colcade( '.colcade-grid', {
+    let mainColcade
+    const videos = document.querySelectorAll('.video-card')
+    
+    mainColcade = new Colcade( '.colcade-grid', {
         columns: '.colcade-col',
         items: '.colcade-item'
     })
-    console.log(mainColcade)
+
+    const searchBox = document.querySelector('input[name="search"]')
+    searchBox.addEventListener('input',e=>{
+        const searchQuery = e.target.value.toLowerCase().trim()
+        mainColcade.destroy()
+        videos.forEach(video=>{
+            video.classList.remove('search-satified')
+            const type = video.querySelector('.languages').innerHTML.toLowerCase()
+            const title = video.querySelector('h3').innerText.toLowerCase()
+            const desc = video.querySelector('p').innerText.toLowerCase()
+            const isVisible =      type.includes(searchQuery)
+                            ||  title.includes(searchQuery)
+                            ||  desc.includes(searchQuery)
+            video.classList.toggle('hidden',!isVisible)
+            video.classList.toggle('search-satified',isVisible)
+        })
+        mainColcade = new Colcade( '.colcade-grid', {
+            columns: '.colcade-col',
+            items: '.search-satified'
+        })
+    })
 </script>

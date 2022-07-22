@@ -1,78 +1,68 @@
-    <section class="bg-white transition-all fixed w-full z-20 ">
-        <header class="container mx-auto flex lg:items-center flex-col p-5 justify-between relative items-start">
-            <div class="flex justify-between lg:justify-center w-full ">
-                <a href="/"><img src="/img/logo.svg" class="h-10 lg:h-20 logo transition-all"></a>
-                <ham class="lg:hidden cursor-pointer grid place-items-center" data-visible="false"
-                    style="-webkit-tap-highlight-color: rgba(0,0,0,0);">
-                    <i class="fas fa-bars text-2xl"></i>
-                </ham>
-            </div>
-            <nav
-                class="gap-5 flex lg:flex flex-col lg:flex-row items-start lg:items-center nav-hidden transition-all mt-5">
-                <a href="/"
-                    class="uppercase font-black font-bebas text-2xl text-gray-700 hover:text-orange-900 transition">
-                    Home</a>
-                <a href="/videos"
-                    class="uppercase font-black font-bebas text-2xl text-gray-700 hover:text-orange-900 transition">Videos
-                    &
-                    Code</a>
-                <div class="relative group">
-                    <span
-                        class="cursor-pointer uppercase font-black font-bebas text-2xl text-gray-700 hover:text-orange-900 transition">Helpful
-                        Links</span>
-                    <div
-                        class="lg:h-0 overflow-hidden lg:p-0 transition-all gap-1 lg:group-hover:h-auto lg:group-hover:p-2 flex flex-col lg:absolute lg:left-1/2 lg:-translate-x-1/2  bg-white lg:items-center rounded lg:shadow pl-5 z-10">
-                        <a href="/links"
-                            class="uppercase font-black font-bebas text-xl text-gray-700 hover:text-orange-900 transition">
-                            AutoHotkey&nbsp;Links</a>
-                        <a href="/scripts"
-                            class="uppercase font-black font-bebas text-xl text-gray-700 hover:text-orange-900 transition">
-                            AutoHotkey&nbsp;Scripts</a>
-                        <a href="/programs"
-                            class="uppercase font-black font-bebas text-xl text-gray-700 hover:text-orange-900 transition">
-                            AutoHotkey&nbsp;Programs</a>
-                        <a href="/channels"
-                            class="uppercase font-black font-bebas text-xl text-gray-700 hover:text-orange-900 transition">
-                            Programming&nbsp;Channels</a>
-                        <a href="/editors"
-                            class="uppercase font-black font-bebas text-xl text-gray-700 hover:text-orange-900 transition">
-                            Coding&nbsp;Editors</a>
-                        <a href="/bootcamps"
-                            class="uppercase font-black font-bebas text-xl text-gray-700 hover:text-orange-900 transition">
-                            Coding&nbsp;BootCamps</a>
-                    </div>
+<section class="bg-white transition-all w-full z-20 ">
+    <header class="container mx-auto flex lg:items-center flex-col p-5 justify-between relative items-start">
+        <div class="flex justify-between lg:justify-center w-full ">
+            <a href="/"><img src="/img/logo.svg" class="h-10 lg:h-20 logo transition-all">
+            </a>
+            <ham
+                class="lg:hidden cursor-pointer grid place-items-center"
+                data-visible="false"
+                style="-webkit-tap-highlight-color: rgba(0,0,0,0);">
+                <i class="fas fa-bars text-2xl"></i>
+            </ham>
+        </div>
+        <nav class="gap-5 flex lg:flex flex-col lg:flex-row items-start lg:items-center nav-hidden transition-all mt-5">
+            <a href="/" class="uppercase font-black font-bebas text-2xl text-gray-700 hover:text-orange-900 transition">
+                Home</a>
+            <a href="/videos" class="uppercase font-black font-bebas text-2xl text-gray-700 hover:text-orange-900 transition">Videos
+                & Code</a>
+            <div class="relative group">
+                <span class="cursor-pointer uppercase font-black font-bebas text-2xl text-gray-700 hover:text-orange-900 transition">
+                    Helpful Links</span>
+                <div class="lg:h-0 overflow-hidden lg:p-0 transition-all gap-1 lg:group-hover:h-auto lg:group-hover:p-2 flex flex-col
+                        lg:absolute lg:left-1/2 lg:-translate-x-1/2 bg-white lg:items-center rounded lg:shadow pl-5 z-10">
+                    <a href="/links" class="uppercase font-black font-bebas text-xl text-gray-700 hover:text-orange-900 transition">
+                        AutoHotkey&nbsp;Links</a>
+                    <a href="/scripts" class="uppercase font-black font-bebas text-xl text-gray-700 hover:text-orange-900 transition">
+                        AutoHotkey&nbsp;Scripts</a>
+                    <a href="/programs" class="uppercase font-black font-bebas text-xl text-gray-700 hover:text-orange-900 transition">
+                        AutoHotkey&nbsp;Programs</a>
+                    <a href="/channels" class="uppercase font-black font-bebas text-xl text-gray-700 hover:text-orange-900 transition">
+                        Programming&nbsp;Channels</a>
+                    <a href="/editors" class="uppercase font-black font-bebas text-xl text-gray-700 hover:text-orange-900 transition">
+                        Coding&nbsp;Editors</a>
+                    <a href="/bootcamps" class="uppercase font-black font-bebas text-xl text-gray-700 hover:text-orange-900 transition">
+                        Coding&nbsp;BootCamps</a>
                 </div>
-                <a href="/hire"
-                    class="uppercase font-black font-bebas text-2xl text-gray-700 hover:text-orange-900 transition">For
-                    Hire</a>
-                <a href="/faq"
-                    class="uppercase font-black font-bebas text-2xl text-gray-700 hover:text-orange-900 transition">FAQ</a>
-            </nav>
-        </header>
-    </section>
-
-    <div class="lg:h-12 hidden"></div>
-    <div class="h-[80px] lg:h-[172px]"></div>
-
-    <script>
-        const ham = document.querySelector('ham')
-        const nav = document.querySelector('nav')
-
-        ham.addEventListener('click', () => {
+            </div>
+            <a href="/hire" class="uppercase font-black font-bebas text-2xl text-gray-700 hover:text-orange-900 transition">For Hire</a>
+            <a href="/faq" class="uppercase font-black font-bebas text-2xl text-gray-700 hover:text-orange-900 transition">FAQ</a>
+        </nav>
+    </header>
+</section>
+<script>
+    const ham = document.querySelector('ham')
+    const nav = document
+        .querySelector('nav')
+        ham
+        .addEventListener('click', () => {
             let visible = ham.dataset.visible
-            visible = (visible == 'true') ? true : false
-            nav.classList.toggle('nav-hidden')
-            ham.setAttribute('data-visible', !visible)
+            visible = (visible == 'true')
+                ? true
+                : false
+            nav
+                .classList
+                .toggle('nav-hidden')
+                ham
+                .setAttribute('data-visible', ! visible)
         })
-
-
-        window.addEventListener('scroll',()=>{
+        window
+        .addEventListener('scroll', () => {
             var top = window.scrollY
             var logo = document.querySelector('.logo')
-            if(top>30){
+            if (top > 30) {
                 logo.classList.add('lg:h-12')
-            }else{
+            } else {
                 logo.classList.remove('lg:h-12')
             }
         })
-    </script>
+</script>

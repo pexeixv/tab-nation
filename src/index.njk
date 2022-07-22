@@ -4,106 +4,77 @@ layout: base.njk
 
 ---
 
-    <link rel="stylesheet" href="/styles/aos@2.3.1.css">
-
+<link rel="stylesheet" href="/styles/aos@2.3.1.css">
     <section class="bg-black text-white" style="background: black url('/img/banner-trans.png') top left no-repeat;">
-        <main
-            class="container mx-auto flex flex-col items-start lg:items-center gap-5 px-5 py-28 lg:py-40 lg:text-center">
+        <main class="container mx-auto flex flex-col items-start lg:items-center gap-5 px-5 py-28 lg:py-40 lg:text-center">
             <h1 class="text-4xl md:text-5xl lg:text-7xl font-black tracking-tight drop-shadow" data-aos="fade-up">
                 AHK scripts and
                 <br class="hidden md:block">
-                videos uploaded all the
-                <br class="hidden md:block">
-                time just for you!
-            </h1>
-            <p class="text-gray-300 text-lg lg:text-xl w-3/4 lg:w-full" data-aos="fade-up" data-aos-delay="400" >
-                Email us your script to showcase on the site or in a video!
-            </p>
-
-            {% set props = { link: "mailto:Tadamm88@gmail.com?subject=Tab%20Nations%20Code", text: "Mail Us"} %}
-            <div data-aos="fade-up" data-aos-delay="800" >
-            {% include 'button.njk' %}
-            </div>
-
-        </main>
-    </section>
-
-
-    <section class="bg-black text-white" data-aos="fade-up" data-aos-delay="2000">
-        <div class="container mx-auto flex flex-col lg:items-center pb-24 lg:pb-40 px-5">
-            
-            {% set props = { text: 'News'} %}
-            {% include 'h2.njk' %}
-
-            <div class="flex gap-5 lg:justify-center flex-wrap mt-6 lg:mt-10">
-
-                {% for article in news %}
-                    {% set props = { text: article} %}
-                    {% include 'news.njk' %}
-                {% endfor %}
-
-            </div>
-        </div>
-    </section>
-
-
-
-    <section class="bg-black text-white">
-        <div class=" px-5 grid container mx-auto gap-16 sm:grid-cols-1 md:grid-cols-2 sm:justify-center pb-24 lg:pb-40">
-
-            <div class="flex flex-col gap-2 items-start max-w-lg home-grid-div">
-                
-                {% set props = { text: 'Upcoming Videos'} %}
-                {% include 'h3.njk' %}
-
-                <div class="flex flex-wrap gap-3 mt-2">
-
-                    {% for title in upcomingVideos | reverse %}
-                        {% set props = { text: title} %}
-                        {% include 'upcoming.njk' %}
-                    {% endfor %}
-                    
+                    videos uploaded all the
+                    <br class="hidden md:block">
+                        time just for you!
+                    </h1>
+                    <p class="text-gray-300 text-lg lg:text-xl w-3/4 lg:w-full" data-aos="fade-up" data-aos-delay="400">
+                        Email us your script to showcase on the site or in a video!
+                    </p>
+                    <div data-aos="fade-up" data-aos-delay="800" class="flex gap-5 items-center">
+                        {% set props = { link: "mailto:Tadamm88@gmail.com?subject=Tab%20Nations%20Code", text: "Mail to us"} %}
+                        {% include 'button.njk' %}
+                        {% set props = { link: "http://youtube.com/user/tadamm?sub_confirmation=1", text: "Check out videos"} %}
+                        {% include 'button.njk' %}
+                    </div>
+                </main>
+            </section>
+            <section class="bg-black text-white" data-aos="fade-up" data-aos-delay="2000">
+                <div class="container mx-auto flex flex-col lg:items-center pb-24 lg:pb-40 px-5">
+                    {% set props = { text: 'News'} %}
+                    {% include 'h2.njk' %}
+                    <div class="flex gap-5 lg:justify-center flex-wrap mt-6 lg:mt-10">
+                        {% for article in news %}
+                            {% set props = { text: article} %}
+                            {% include 'news.njk' %}
+                        {% endfor %}
+                    </div>
                 </div>
-            </div>
-            <div class="flex flex-col gap-2 items-start max-w-lg home-grid-div">
-
-                {% set props = { text: 'Monthly Newsletter'} %}
-                {% include 'h3.njk' %}
-
-                <p class="">Sign up for AHK monthly newsletter!</p>
-            {% set props = { link: "//tabnationcoding.us1.list-manage.com/subscribe?u=c1762be40792bfff92fd2aee4&id=a4b72fee57", text: "Sign Up"} %}
-            {% include 'button.njk' %}
-
-            </div>
-            <div class="flex flex-col gap-2 items-start max-w-lg home-grid-div">
-
-                {% set props = { text: 'Want to help me out?'} %}
-                {% include 'h3.njk' %}
-
-                <p class="">Anything you can help with with paypal would be awesome to help me keep on coding and
-                    running my videos and site.</p>
-                    {% set props = { link: "//paypal.com/paypalme/tabnationYT", text: "Donate"} %}
-                    {% include 'button.njk' %}
-
-            </div>
-            <div class="flex flex-col gap-2 items-start max-w-lg home-grid-div">
-                
-                {% set props = { text: 'Follow us on Youtube'} %}
-                {% include 'h3.njk' %}
-
-                <p class="">Lots of videos uploaded monthly! </p>
-                    {% set props = { link: "//youtube.com/user/tadamm?sub_confirmation=1", text: "Subscribe"} %}
-                    {% include 'button.njk' %}
-            </div>
-        </div>
-    </section>
-
-
-    <script src="/js/aos@2.3.1.js"></script>
-    <script>
-        AOS.init({
-            once: true,
-            duration: 500
-        })
-    </script>
-
+            </section>
+            <section class="bg-black text-white">
+                <div class=" px-5 grid container mx-auto gap-16 sm:grid-cols-1 md:grid-cols-2 sm:justify-center pb-24 lg:pb-40">
+                    <div class="flex flex-col gap-2 items-start max-w-lg home-grid-div">
+                        {% set props = { text: 'Upcoming Videos'} %}
+                        {% include 'h3.njk' %}
+                        <div class="flex flex-wrap gap-3 mt-2">
+                            {% for title in upcomingVideos | reverse %}
+                                {% set props = { text: title} %}
+                                {% include 'upcoming.njk' %}
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-2 items-start max-w-lg home-grid-div">
+                        {% set props = { text: 'Monthly Newsletter'} %}
+                        {% include 'h3.njk' %}
+                        <p class="">Sign up for AHK monthly newsletter!</p>
+                        {% set props = { link: "//tabnationcoding.us1.list-manage.com/subscribe?u=c1762be40792bfff92fd2aee4&id=a4b72fee57", text: "Sign Up"} %}
+                        {% include 'button.njk' %}
+                    </div>
+                    <div class="flex flex-col gap-2 items-start max-w-lg home-grid-div">
+                        {% set props = { text: 'Want to help me out?'} %}
+                        {% include 'h3.njk' %}
+                        <p class="">Anything you can help with with paypal would be awesome to help me keep on coding and running my videos and
+                            site.</p>
+                        {% set props = { link: "//paypal.com/paypalme/tabnationYT", text: "Donate"} %}
+                        {% include 'button.njk' %}
+                    </div>
+                    <div class="flex flex-col gap-2 items-start max-w-lg home-grid-div">
+                        {% set props = { text: 'Follow us on Youtube'} %}
+                        {% include 'h3.njk' %}
+                        <p class="">Lots of videos uploaded monthly!
+                        </p>
+                        {% set props = { link: "//youtube.com/user/tadamm?sub_confirmation=1", text: "Subscribe"} %}
+                        {% include 'button.njk' %}
+                    </div>
+                </div>
+            </section>
+            <script src="/js/aos@2.3.1.js"></script>
+            <script>
+                AOS.init({once: true, duration: 500})
+            </script>

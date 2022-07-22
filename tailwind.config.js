@@ -1,16 +1,15 @@
 module.exports = {
-  content: ['./**/*.{html,njk}'],
+  content: ["./**/*.{html,njk}"],
   theme: {
     extend: {
       fontFamily: {
-        'bebas': ['Bebas Neue', 'Arial', 'sans-serif']
-      }
+        bebas: ["Bebas Neue", "Arial", "sans-serif"],
+      },
     },
   },
-  plugins: [],
+  plugins: [require("@tailwindcss/typography")],
 
   "tailwindCSS.includeLanguages": {
-    "plaintext": "njk"
-  }
-
-}
+    plaintext: "njk",
+  },
+};

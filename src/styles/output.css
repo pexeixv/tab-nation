@@ -1218,16 +1218,8 @@ video {
   visibility: visible;
 }
 
-.\!visible {
-  visibility: visible !important;
-}
-
 .invisible {
   visibility: hidden;
-}
-
-.fixed {
-  position: fixed;
 }
 
 .absolute {
@@ -1366,10 +1358,6 @@ video {
 
 .h-10 {
   height: 2.5rem;
-}
-
-.h-\[80px\] {
-  height: 80px;
 }
 
 .h-fit {
@@ -1919,10 +1907,6 @@ input[type="search"]::-webkit-search-cancel-button {
 
   .lg\:h-12 {
     height: 3rem;
-  }
-
-  .lg\:h-\[172px\] {
-    height: 172px;
   }
 
   .lg\:w-full {

@@ -5,18 +5,18 @@ layout: markdown.njk
 
 August 6th, 10am-4:30pm EDT
 
-| Time            | Event                                        | Mode      |
-| --------------- | -------------------------------------------- | --------- |
-| 10am-10:15am    | Intro                                        |           |
-| 10:15am-11:00am | AHK v2 vs v1                                 | Panel     |
-| 11:00-12:00pm   | Best programming approach & when to use them | Panel     |
-| 12:00-1:00pm    | Objects / COM / Data structure               | Lecture   |
-| 1:00-1:30pm     | Lunch                                        | Open talk |
-| 1:30-2:30pm     | RegEx                                        | Panel     |
-| 2:30-3          | IDEs                                         | Panel     |
-| 3:00-3:45       | Data storage                                 | Panel     |
-| 3:45-4          | Closing                                      |           |
-| 4:00-4:30       | Free open talk                               | Open talk |
+| Time              | Event                                        | Mode      |
+| ----------------- | -------------------------------------------- | --------- |
+| 10:00am - 10:15am | Intro                                        |           |
+| 10:15am - 11:00am | AHK v2 vs v1                                 | Panel     |
+| 11:00am - 12:00pm | Best programming approach & when to use them | Panel     |
+| 12:00am - 1:00pm  | Objects / COM / Data structure               | Lecture   |
+| 1:00pm - 1:30pm   | Lunch                                        | Open talk |
+| 1:30pm - 2:30pm   | RegEx                                        | Panel     |
+| 2:30pm - 3:00pm   | IDEs                                         | Panel     |
+| 3:00pm - 3:45pm   | Data storage                                 | Panel     |
+| 3:45pm - 4:00pm   | Closing                                      |           |
+| 4:00pm - 4:30pm   | Free open talk                               | Open talk |
 
 This event will not be a live stream on Youtube, but each section of the event will be uploaded over the next few days following the event close. Poll result will be saved and shared also.
 Make sure to have any questions you may have ready for when we open the floor as only 5 minutes per person will be allotted. So if you take 4 minutes to explain we will only have a

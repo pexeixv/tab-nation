@@ -3,7 +3,7 @@ title: AHKcon 1 2022
 layout: markdown.njk
 ---
 
-August 6th, 10am-4:30pm EDT
+August 6th 2022, 10:00am - 4:30pm EDT
 
 | Time              | Event                                        | Mode      |
 | ----------------- | -------------------------------------------- | --------- |
